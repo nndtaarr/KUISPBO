@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Kriteria;
-import Pelamar.Pelamar;
 import Seleksi.Seleksi;
 /**
  *
@@ -12,25 +11,25 @@ import Seleksi.Seleksi;
  */
 public class DesignerCriteria extends Pelamar implements Seleksi {
 
-    public DesignerCriteria (String nama,  int nilai1, int nilai2, int nilai3) {
+    public DesignerCriteria (String nama,  double nilai1, double nilai2, double nilai3) {
         super(nama,nilai1, nilai2, nilai3);
     }
     
-    public void setNilai1(int nilai1) {
+    public void setNilai1(double nilai1) {
         this.nilai1 = nilai1;
     }
 
-    public void setNilai2(int nilai2) {
+    public void setNilai2(double nilai2) {
         this.nilai2 = nilai2;
     }
 
-    public void setNilai3(int nilai3) {
+    public void setNilai3(double nilai3) {
         this.nilai3 = nilai3;
     }
   @Override
     public String keterangan() {
-        if(this.hitungNilaiAkhir() >= 85) return "Keterangan : DITERIMA\nSelamat!" + this.nama + " mendapatkan pekerjaan sebagai Designer";
-        else return "Keterangan : COBA LAGI\nMohon Maaf," + this.nama + " tidak mendapatkan pekerjaan sebagai Desiger";
+        if(this.hitungNilaiAkhir() >= 85) return "DITERIMA\nSelamat!" + this.nama + " mendapatkan pekerjaan sebagai Designer";
+        else return "COBA LAGI\nMohon Maaf," + this.nama + " tidak mendapatkan pekerjaan sebagai Designer";
     }
 
     @Override

@@ -41,11 +41,11 @@ public class Main {
         System.out.println("Keterangan: Nilai yang valid berada do antara 0-100");
         if(pilih == 1){
             System.out.print("\nNilai Programming Knowledge : ");
-            int nilai1= input.nextInt();
+            double nilai1= input.nextInt();
             System.out.print("\nNilai Clean Coding : ");
-            int nilai2= input.nextInt();
+            double nilai2= input.nextInt();
             System.out.print("\nNilai Debugging : ");
-            int nilai3 = input.nextInt();
+            double nilai3 = input.nextInt();
            ProgrammerCriteria pegawai = new ProgrammerCriteria(nama,nilai1, nilai2, nilai3);
                 do {
                  System.out.println("\n +++ MENU ++");
@@ -74,11 +74,11 @@ public class Main {
             }while(true);   
         } else if(pilih == 2){
             System.out.print("\nNilai Design Portofolio: ");
-            int nilai1= input.nextInt();
+            double nilai1= input.nextInt();
             System.out.print("\nNilai Prototyping : ");
-            int nilai2= input.nextInt();
+            double nilai2= input.nextInt();
             System.out.print("\nNilai Creativity : ");
-            int nilai3 = input.nextInt();
+            double nilai3 = input.nextInt();
             DesignerCriteria pegawai = new DesignerCriteria(nama, nilai1, nilai2, nilai3);
                 do {
                  System.out.println("\n +++ MENU ++");
@@ -107,11 +107,11 @@ public class Main {
             }while(true); 
         }  else if(pilih == 3){
             System.out.print("\nNilai Innovation : ");
-            int nilai1= input.nextInt();
+            double nilai1= input.nextInt();
             System.out.print("\nNilai Decision Making : ");
-            int nilai2= input.nextInt();
+            double nilai2= input.nextInt();
             System.out.print("\nNilai Communication : ");
-            int nilai3 = input.nextInt();
+            double nilai3 = input.nextInt();
             ManagerCriteria pegawai = new ManagerCriteria(nama, nilai1, nilai2, nilai3);
                 do {
                  System.out.println("\n +++ MENU ++");
