@@ -18,6 +18,7 @@ public class Main {
      * @param args the command line arguments
      */
      public static void main(String[] args) {
+         try{
         int pilih;
         String nama;
         Scanner input = new Scanner(System.in);
@@ -41,11 +42,11 @@ public class Main {
         System.out.println("Keterangan: Nilai yang valid berada do antara 0-100");
         if(pilih == 1){
             System.out.print("\nNilai Programming Knowledge : ");
-            double nilai1= input.nextInt();
+            double nilai1= input.nextDouble();
             System.out.print("\nNilai Clean Coding : ");
-            double nilai2= input.nextInt();
+            double nilai2= input.nextDouble();
             System.out.print("\nNilai Debugging : ");
-            double nilai3 = input.nextInt();
+            double nilai3 = input.nextDouble();
            ProgrammerCriteria pegawai = new ProgrammerCriteria(nama,nilai1, nilai2, nilai3);
                 do {
                  System.out.println("\n +++ MENU ++");
@@ -61,11 +62,11 @@ public class Main {
                 else if (pilih == 2){
                     System.out.println("\n *** Edit Nilai ***");
                     System.out.print("Nilai Programming Knowledge : ");
-                    pegawai.setNilai1(input.nextInt());
+                    pegawai.setNilai1(input.nextDouble());
                     System.out.print("Nilai Clean Coding : ");
-                    pegawai.setNilai2(input.nextInt());
+                    pegawai.setNilai2(input.nextDouble());
                     System.out.print("Nilai Debugging : ");
-                    pegawai.setNilai3(input.nextInt());
+                    pegawai.setNilai3(input.nextDouble());
                 }
               else {
                      System.out.println("Terima Kasih!");
@@ -74,11 +75,11 @@ public class Main {
             }while(true);   
         } else if(pilih == 2){
             System.out.print("\nNilai Design Portofolio: ");
-            double nilai1= input.nextInt();
+            double nilai1= input.nextDouble();
             System.out.print("\nNilai Prototyping : ");
-            double nilai2= input.nextInt();
+            double nilai2= input.nextDouble();
             System.out.print("\nNilai Creativity : ");
-            double nilai3 = input.nextInt();
+            double nilai3 = input.nextDouble();
             DesignerCriteria pegawai = new DesignerCriteria(nama, nilai1, nilai2, nilai3);
                 do {
                  System.out.println("\n +++ MENU ++");
@@ -94,11 +95,11 @@ public class Main {
                 else if (pilih == 2){
                     System.out.println("\n *** Edit Nilai ***");
                     System.out.print("Nilai Design Portofolio : ");
-                    pegawai.setNilai1(input.nextInt());
+                    pegawai.setNilai1(input.nextDouble());
                     System.out.print("Nilai Prototyping : ");
-                    pegawai.setNilai2(input.nextInt());
+                    pegawai.setNilai2(input.nextDouble());
                     System.out.print("Nilai Creativity : ");
-                    pegawai.setNilai3(input.nextInt());
+                    pegawai.setNilai3(input.nextDouble());
                 }
                else {
                      System.out.println("Terima Kasih!");
@@ -107,11 +108,11 @@ public class Main {
             }while(true); 
         }  else if(pilih == 3){
             System.out.print("\nNilai Innovation : ");
-            double nilai1= input.nextInt();
+            double nilai1= input.nextDouble();
             System.out.print("\nNilai Decision Making : ");
-            double nilai2= input.nextInt();
+            double nilai2= input.nextDouble();
             System.out.print("\nNilai Communication : ");
-            double nilai3 = input.nextInt();
+            double nilai3 = input.nextDouble();
             ManagerCriteria pegawai = new ManagerCriteria(nama, nilai1, nilai2, nilai3);
                 do {
                  System.out.println("\n +++ MENU ++");
@@ -127,21 +128,25 @@ public class Main {
                 else if (pilih == 2){
                     System.out.println("\n *** Edit Nilai ***");
                     System.out.print("Nilai Innovation : ");
-                    pegawai.setNilai1(input.nextInt());
+                    pegawai.setNilai1(input.nextDouble());
                     System.out.print("Nilai Decision Making : ");
-                    pegawai.setNilai2(input.nextInt());
+                    pegawai.setNilai2(input.nextDouble());
                     System.out.print("Nilai Communication : ");
-                    pegawai.setNilai3(input.nextInt());
+                    pegawai.setNilai3(input.nextDouble());
                 }
                 else {
                      System.out.println("Terima Kasih!");
                     break;
                 }
             } while(true);
-        }    
-    }
-    
+        }
+        else{
+            System.out.println("=== Input SALAH ===");
+            System.out.println("(Mohon Input Ulang)");
+        }
+     }
+        catch(Exception error){
+            System.out.println("Error karena " + error.getMessage());
+        }
+     }
 }
-
-
-
