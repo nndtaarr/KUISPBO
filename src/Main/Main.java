@@ -67,10 +67,8 @@ public class Main {
                     System.out.print("Nilai Debugging : ");
                     pegawai.setNilai3(input.nextInt());
                 }
-                 else if (pilih==3){
-                    System.out.println("Terima Kasih!");
-                }
-                else {
+              else {
+                     System.out.println("Terima Kasih!");
                     break;
                 }
             }while(true);   
@@ -102,10 +100,8 @@ public class Main {
                     System.out.print("Nilai Creativity : ");
                     pegawai.setNilai3(input.nextInt());
                 }
-                 else if (pilih==3){
-                    System.out.println("Terima Kasih!");
-                }
-                else {
+               else {
+                     System.out.println("Terima Kasih!");
                     break;
                 }
             }while(true); 
@@ -137,15 +133,14 @@ public class Main {
                     System.out.print("Nilai Communication : ");
                     pegawai.setNilai3(input.nextInt());
                 }
-                else if (pilih==3){
-                    System.out.println("Terima Kasih!");
-                }
                 else {
+                     System.out.println("Terima Kasih!");
                     break;
                 }
-            }while(true);   
+            } while(true);
+        }    
     }
-  }
+    
 }
 
 
